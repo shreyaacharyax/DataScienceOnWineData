@@ -1,67 +1,69 @@
 # DataScienceOnWineData
 
-CS-165 intro to data science project
-🍷 Wine Classification and Chemical Analysis
-📖 Overview
-This project explores the Wine dataset, which contains the results of chemical analyses of wines from three different cultivars grown in the same region in Italy. Each wine sample is described by 13 numerical chemical attributes and a class label indicating the cultivar.
+## CS-165: Introduction to Data Science Project  
+**🍷 Wine Classification and Chemical Analysis**
 
-The objective is to:
+---
 
-Understand the chemical differences between the cultivars through Exploratory Data Analysis (EDA)
+## 📖 Overview
 
-Apply dimensionality reduction techniques for visualization
+This project explores the **Wine dataset**, which contains results of chemical analyses of wines grown in the same region in Italy from **three different cultivars**.  
+Each wine sample is described by **13 numerical chemical features** and a **class label** identifying the cultivar.
 
-Build and evaluate classification models to predict wine class
+### 🎯 Objectives:
+- Understand chemical differences via **Exploratory Data Analysis (EDA)**
+- Apply **dimensionality reduction** techniques for visual interpretation
+- Build and evaluate **classification models** to predict wine class
 
-📂 Dataset Details
-Source: UCI Machine Learning Repository
+---
 
-Samples: 178 wine samples
+## 📂 Dataset Details
 
-Features: 13 chemical attributes (e.g., Alcohol, Flavanoids, Magnesium)
+- **Source**: UCI Machine Learning Repository  
+- **Samples**: 178  
+- **Features**: 13 chemical attributes (e.g., `Alcohol`, `Flavanoids`, `Magnesium`)  
+- **Target**: Wine class (Cultivar `1`, `2`, or `3`)
 
-Target: Wine class (Cultivar 1, 2, or 3)
+---
 
-🛠️ Tools and Libraries
-Python
+## 🛠️ Tools and Libraries
 
-pandas, numpy – data handling
+- **Language**: Python  
+- **Libraries**:
+  - `pandas`, `numpy` – for data handling  
+  - `matplotlib`, `seaborn` – for visualization  
+  - `scikit-learn` – for preprocessing, PCA, and modeling  
 
-matplotlib, seaborn – visualization
+---
 
-scikit-learn – machine learning, PCA, preprocessing
+## 🔄 Workflow
 
-🔄 Workflow
-1. Data Loading & Preprocessing
-Imported wine.csv and added proper column names
+### 1️⃣ Data Loading & Preprocessing
+- Loaded `wine.csv` and assigned column names  
+- Checked and handled missing values using `SimpleImputer`  
+- Standardized features using `StandardScaler`  
 
-Checked for and handled missing values using SimpleImputer
+### 2️⃣ Exploratory Data Analysis (EDA)
+- Generated descriptive statistics (global and per class)  
+- Visualized distributions using **boxplots** and **histograms**  
+- Plotted a **correlation heatmap** to explore feature relationships  
 
-Standardized features using StandardScaler for uniform scale
+### 3️⃣ Dimensionality Reduction with PCA
+- Applied **Principal Component Analysis** to reduce feature dimensions  
+- Visualized class separability in 2D PCA space  
 
-2. Exploratory Data Analysis (EDA)
-Summarized descriptive statistics globally and by wine class
+### 4️⃣ Classification Models
+- **Logistic Regression**: Trained on scaled data, evaluated accuracy  
+- **Decision Tree Classifier**: Trained and tested  
+- Compared performance and interpretability  
 
-Visualized distributions with boxplots and histograms
+---
 
-Generated a correlation heatmap to detect feature relationships
+## ✅ Results & Insights
 
-3. Dimensionality Reduction with PCA
-Applied Principal Component Analysis to reduce dimensions
+- PCA showed strong **class separability** in reduced dimensions  
+- Features like **Flavanoids**, **Alcohol**, and **Proline** correlated highly with class  
+- Both models performed well, with the **Decision Tree** offering better interpretability
 
-Plotted PCA results to visualize class separation in 2D space
-
-4. Classification Models
-Logistic Regression: trained on scaled data, accuracy reported
-
-Decision Tree Classifier: trained and evaluated
-
-Compared model performance and interpretability
-
-✅ Results & Insights
-PCA revealed that classes are well-separated in lower dimensions
-
-Features such as Flavanoids, Alcohol, and Proline showed strong correlation with wine class
-
-Both models performed well, but Decision Tree offers better interpretability
+---
 
